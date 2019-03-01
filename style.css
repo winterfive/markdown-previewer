@@ -1,6 +1,6 @@
-/* fonts
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
 
-vars
+body {
+  font-family: 'Special Elite', cursive;
+}
 
-style
-*/
