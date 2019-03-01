@@ -1,35 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+const userInput = `
 
-class MyApp extends React.Component() {
-    constructor(props) {
-        super(props)
+### Headers
 
-        // props
+# header1
+## header2
+### header3
+
+`
+
+class MyApp extends React.Component {
+  constructor(props) {
+    super(props)
+      this.state = {
+        text: userInput
+      }
     }
-
-    //binds
-
+  
     render() {
         return (
-            <div>
-                <Editor />
-                <Preview />
+          <div>
+            <h1>Markdown Previewer</h1>
+            <div className="leftArea">
+              <textarea id="editor" />
             </div>
+            <div className="rightArea">
+              <p id="preview" dangerouslySetInnerHTML={{__html: marked(this.state.text)}} />
+            </div>
+          </div>
+          
         )
     }
 }
 
-const Editor = (props) => {
-    return (
-        <div><textarea id="editor" /></div>
-    )
-}
-
-const Preview = (props) => {
-    return (
-        <div><p id="preview" /></div>
-    )
-}
-
-ReactDOM.render(<MyApp />, Document.getElementById("appDiv"));
+ReactDOM.render(<MyApp />, document.getElementById("root"));
