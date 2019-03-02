@@ -1,6 +1,5 @@
 const userInput = `
-
-### Headers
+## Headers
 
 # Header1
 ## Header2
@@ -8,6 +7,7 @@ const userInput = `
 #### Header4
 ##### Header5
 ###### Header6
+<br/>
 
 ### Lists
 
@@ -16,6 +16,8 @@ const userInput = `
 - three
   - one
   - two
+    - one
+    - two
 
 1. one
 2. two
@@ -27,8 +29,10 @@ const userInput = `
 __bold__
 *italic*
 _italic_
+~~strikethrough~~
+**_bold and italic_**
 
-### Blcok Quote
+### Block Quote
 
 > For every action, there is an equal and opposite criticism.
 > Steven Wright
@@ -41,6 +45,10 @@ _italic_
 
 [GitHub](www.github.com)
 [LeeGainer.com](www.leegainer.com)
+
+### Inline Link
+
+Visit [Cake Wrecks](www.cakewrecks.com) for a laugh!
 
 ### Inline Code
 
