@@ -9,22 +9,19 @@ body {
 }
 
 #header {
-  display: grid;
+  display: flex;
   justify-content: center;
   font-family: 'Special Elite', cursive;
   font-size: $font-size;
-  margin: auto;
-  width: 70%;
-  margin-top: 20px;
+  margin-top: 1.5em;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 50% 50%; 
+  display: flex; 
 }
 
 #leftArea {
-  height: 70vh;
+  height: 80vh;
   flex-grow: 1;
 }
 
@@ -46,3 +43,12 @@ body {
   padding: 1em;
 }
 
+@media only screen and (max-width: 800px) {
+  .container {
+  flex-direction: column;
+  }
+  
+  #leftArea {
+  height: 42vh;
+  }
+}
